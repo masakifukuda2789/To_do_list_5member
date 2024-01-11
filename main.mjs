@@ -19,7 +19,6 @@ app.get("/", async (request, response) => {
           <li>
             <span>${escapeHTML(todo.title)}</span>
             <span>${escapeHTML(todo.ddl)}</span>
-            <span>${escapeHTML(todo.Date)}</span>
             <form method="post" action="/delete" class="delete-form">
               <input type="hidden" name="id" value="${todo.id}" />
               <button type="submit">削除</button>
@@ -33,12 +32,10 @@ app.get("/", async (request, response) => {
 });
 
 app.post("/create", async (request, response) => {
-  const currentDate = new Date();
   await prisma.todo.create({
     data: { 
       title: request.body.title, 
-      ddl: request.body.ddl,
-      date: currentDate.toLocaleDateString()
+      ddl: request.body.ddl
     },
   });
   response.redirect("/");
