@@ -3,5 +3,11 @@
 }
 #body{
   background-image:url(https://www.sozailab.jp/db_img/sozai/59197/89303d3068481573c70e8214ba436ed3.jpg);
-  
-  }
+  font-family: "メイリオ"
+}
+ul {
+  color:#1e366a;
+  border-top: solid #1e366a 1px;/*上のボーダー*/
+  border-bottom: solid #1e366a 1px;/*下のボーダー*/
+  padding: 0.5em 0 0.5em 1.5em;
+}
