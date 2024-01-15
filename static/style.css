@@ -5,27 +5,91 @@
   background-image:url(https://www.sozailab.jp/db_img/sozai/59197/89303d3068481573c70e8214ba436ed3.jpg);
   font-family: "メイリオ"
 }
+h1 {
+  padding-left: 10%;
+}
 ul {
-  color:#1e366a;
-  border-top: solid #1e366a 1px;/*上のボーダー*/
-  border-bottom: solid #1e366a 1px;/*下のボーダー*/
-  padding: 0.5em 0 0.5em 1.5em;
+  width: 75%;
+  margin: auto;
+  padding: 0;
 }
 ul li {
+  color: #404040;
+  border-left: solid 10px #cf1f08;/*左側の線*/
+  border-bottom: solid 2px #dadada;/*下に灰色線*/
+  background: whitesmoke;
+  margin-bottom: 5px;/*下のバーとの余白*/
   line-height: 1.5;
-  padding: 0.5em 0;
+  padding: 0.5em;
+  list-style-type: none!important;/*ポチ消す*/
+  font-weight: bold;
 }
+
 button {
   display: inline-block;
   padding: 0.5em 1em;
   text-decoration: none;
-  background: #668ad8;/*ボタン色*/
+  background: #cf1f08;/*ボタン色*/
   color: #FFF;
-  border-bottom: solid 4px #627295;
+  border-bottom: solid 4px #911909;
   border-radius: 3px;
+  transition: 0.3s;
+}
+button:hover {
+  background-color: #eb3a22
 }
 button:active {
   -webkit-transform: translateY(4px);
   transform: translateY(4px);/*下に動く*/
   border-bottom: none;/*線を消す*/
+}
+
+#add_task {
+  width: 50%;
+  margin: auto;
+  padding: 3em;
+  background-color: whitesmoke;
+}
+#add_task .text_box {
+  position: relative;
+}
+.text_box input {
+  font: 15px/24px "メイリオ";
+  box-sizing: border-box;
+  width: 100%;
+  letter-spacing: 0.5px;
+  padding-left: 5em;
+  outline: none;
+  border: 0;
+  border-bottom: 1px solid black;
+  background-color: transparent;
+}
+input ~ .focus_line {
+  position: absolute;
+  bottom: 24px;
+  left: 0;
+  width: 0;
+  height: 2px;
+  transition: 0.4s;
+  background-color: #da3c41;
+}
+input:focus ~ .focus_line {
+  width: 100%;
+}
+input ~ label {
+  position: relative;
+  top: -22px;
+  left: 0;
+  width: 100%;
+  transition: 0.3s;
+  letter-spacing: 0.5px;
+  color: #aaaaaa;
+}
+input:hover ~ label {
+  color: #da3c41;
+}
+input:focus ~ label {
+  font-size: 12px;
+  top: -40px;
+  color: #da3c41;
 }

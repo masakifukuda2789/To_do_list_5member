@@ -10,9 +10,17 @@
     <ul>
       <!-- todos -->
     </ul>
-    <form action="/create" method="post">
-      <input type="text" name="title" placeholder="内容"/>
-      <input type="text" name="ddl" placeholder="締め切り"/>
+    <form id="add_task" action="/create" method="post">
+      <div class="text_box">
+        <input type="text" name="title"/>
+        <label>内容</label>
+        <span class="focus_line"></span>
+      </div>
+      <div class="text_box">
+        <input type="text" name="ddl"/>
+        <label>締め切り</label>
+        <span class="focus_line"></span>
+      </div>
       <button type="submit">追加</button>
     </form>
     <script src="/script.js"></script>
