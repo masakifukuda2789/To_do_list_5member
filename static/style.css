@@ -8,6 +8,10 @@
 h1 {
   padding-left: 10%;
 }
+h1 #to-do {
+  font-size: 60px;
+  color: cadetblue;
+}
 ul {
   width: 75%;
   margin: auto;
@@ -31,12 +35,14 @@ button {
   text-decoration: none;
   background: #cf1f08;/*ボタン色*/
   color: #FFF;
+  border: none;
   border-bottom: solid 4px #911909;
   border-radius: 3px;
-  transition: 0.3s;
+  transition: 0.2s;
 }
 button:hover {
-  background-color: #eb3a22
+  background-color: #eb3a22;
+  box-shadow: 0 0 5px 1px #911909;
 }
 button:active {
   -webkit-transform: translateY(4px);
@@ -49,6 +55,9 @@ button:active {
   margin: auto;
   padding: 3em;
   background-color: whitesmoke;
+}
+#add_task:focus-within {
+  box-shadow: 0 0 5px 1px #911909;
 }
 #add_task .text_box {
   position: relative;
@@ -63,6 +72,10 @@ button:active {
   border: 0;
   border-bottom: 1px solid black;
   background-color: transparent;
+  transition: 0.2s;
+}
+.text_box input:hover {
+  box-shadow: 0 5px 3px -3px #911909;
 }
 input ~ .focus_line {
   position: absolute;
